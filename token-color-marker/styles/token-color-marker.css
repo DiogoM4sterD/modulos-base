@@ -1,0 +1,208 @@
+/***** TokenHUD *****/
+
+.token-color-marker-palette {
+    visibility: hidden;
+    position: absolute;
+    left: 59px;
+    top: -25px;
+    display: grid;
+    padding: 3px;
+    box-sizing: content-box;
+    width: 100px;
+    grid-template-columns: repeat(4, 25%);
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 15px var(--color-shadow-dark);
+    border: 1px solid var(--color-border-dark-3);
+    border-radius: 4px;
+}
+
+.token-color-marker-palette > i {
+    display: none;
+    background: transparent;
+    color: white;
+    line-height: normal;
+    align-self: center;
+    font-size: 20px;
+}
+
+.token-color-marker-palette > i.active {
+    display: block;
+}
+
+.token-color-marker-palette.active {
+    visibility: visible;
+}
+
+.token-color-marker {
+    margin: 0 !important;
+    opacity: 0.7;
+    border: 1px solid transparent;
+}
+
+.token-color-marker:hover {
+    opacity: 1 !important;
+    border: 1px solid var(--control-active-border-color);
+    border-radius: 5px;
+}
+
+.token-color-marker.active {
+    opacity: 1 !important;
+    border: 1px solid var(--control-active-border-color);
+    border-radius: 5px;
+}
+
+.token-color-marker > img {
+    margin: 0px !important;
+    opacity: 1 !important;
+    filter: none;
+}
+
+.token-color-marker-icon {
+    font-size: 24px; 
+    display: block;
+}
+
+/***** Chat Message *****/
+
+.token-color-marker-icon-chat {
+    display: inline;
+    vertical-align: bottom;
+    width: 14px;
+    border: none;
+}
+
+/***** Color Settings Menu *****/
+
+.token-color-marker-palette-settings {
+    padding: 0;
+    margin-top: 0;
+    gap: 5px;
+    min-width: 650px;
+}
+  
+.token-color-marker-palette-settings > li {
+    align-items: center;
+    gap: 0.5em;
+}
+
+.token-color-marker-palette-settings > li .order-col{
+    max-width: 12px;
+    visibility: hidden;
+}
+
+.token-color-marker-palette-settings > li .order-col-button-group{
+    height: 27px;
+}
+
+.token-color-marker-palette-settings > li .order-col-button{
+    --button-size: var(--input-height)/2;
+}
+
+.token-color-marker-palette-settings > li .name-col{
+    min-width: 150px;
+}
+
+.token-color-marker-palette-settings > li .hex-col{
+    max-width: 75px;
+}
+
+.token-color-marker-palette-settings > li .text-col{
+    max-width: 45px;
+}
+
+.token-color-marker-palette-settings > li .delete-col{
+    max-width: 12px;
+    visibility: hidden;
+}
+
+.token-color-marker-palette-settings > li .custom-file-picker{
+    flex: 5;
+    max-width: 373px;
+}
+
+.token-color-marker-palette-settings > li .custom-file-picker > button{
+    line-height: var(--form-field-height);
+    border: 1px solid var(--color-border-light-tertiary);
+}
+
+.token-color-marker-palette-settings .header {
+    font-weight: bold;
+}
+
+.token-color-marker-palette-settings > li .preview-col {
+    min-width: 50px;
+    max-width: 50px;
+    text-align: center;
+}
+
+.token-color-marker-palette-settings > li .preview-col > img {
+    height: 27px;
+    width: 27px;
+    margin-left: 13px;
+}
+
+.preview-background {
+    position: absolute;
+    width: 50px;
+    margin-left: -23px;
+    margin-top: -3px;
+    z-index: -1;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.token-color-marker-color-icon-button {
+    background: transparent;
+    padding: 0;
+    line-height: normal;
+    border: 0;
+    align-self: center;
+}
+  
+.token-color-marker-color-icon-button > i {
+    margin-right: 0;
+}
+  
+.token-color-marker-color-icon-button:hover, .token-color-marker-color-icon-button:focus {
+    box-shadow: none;
+    text-shadow: 0 0 5px red;
+}
+
+.color-palette-settings {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.scroll-region {
+  flex: 1 1 auto;
+  overflow-y: auto;     /* ← scrollbar appears only when content is too big */
+  box-sizing: border-box;
+  position: relative; 
+}
+
+.bottom-buttons {
+  border-top: 1px solid;
+  padding-top: 10px;
+}
+
+/***** CombatTracker *****/
+
+.token-color-marker-combat-icon-wrapper {
+    display: inline;
+    width: 16px;
+    height: 16px !important;
+    margin: 1px 0;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    text-align: center;
+    float: none !important;
+}
+
+.token-color-marker-combat-icon {
+    font-size: 18px;
+    position:relative;
+    top: calc(50% - 12px);
+}

@@ -1,0 +1,59 @@
+<nav id="scene-navigation" aria-roledescription="{{localize "SCENE_NAVIGATION.LABEL"}}" data-tooltip-direction="RIGHT">
+    {{#if canGoBack}}
+    <a id="scene-navigation-previous" class="ui-control" data-action="showPrevious">
+        <i class="fa-solid fa-arrow-left" inert></i>
+    </a>
+    {{/if}}
+    {{#if canExpand}}
+    <a id="scene-navigation-expand" class="ui-control" data-action="toggleExpand">
+        <i class="fa-solid fa-caret-down" inert></i>
+    </a>
+    {{/if}}
+    {{#with scenes.viewed}}
+    <menu id="scene-navigation-viewed" class="scene-navigation-menu flexcol">
+        {{> ".scene" }}
+    </menu>
+    {{/with}}
+    {{#if scenes.levels}}
+    <menu id="scene-navigation-levels" class="scene-levels scene-navigation-menu flexcol" style="--max-levels: {{ scenes.levels.length }}">
+        {{#each scenes.levels}}
+        <li class="level-row">
+            <div class="ui-control scene scene-level {{ css }}" data-scene-id="{{ sceneId }}" data-level-id="{{ id }}" data-action="viewLevel">
+                <span class="ellipsis">{{ name }}</span>
+                {{#if users}}
+                <ul class="scene-players">
+                    {{#each users}}
+                    <li class="scene-player" style="--color-bg: {{ color }}; --color-border: {{ border }}" data-tooltip
+                        aria-label="{{ name }}">{{ letter }}</li>
+                    {{/each}}
+                </ul>
+                {{/if}}
+            </div>
+        </li>
+        {{/each}}
+    </menu>
+    {{/if}}
+    <menu id="scene-navigation-active" class="scene-navigation-menu flexcol">
+        {{#each scenes.active}}
+        {{> ".scene" }}
+        {{/each}}
+    </menu>
+    <div class="inactive-container{{#if useFolders}} folders{{/if}}">
+        {{> "modules/monks-scene-navigation/templates/navigation-menu-partial.hbs" menu-id="scene-navigation-inactive" menu-item=scenes.inactive }}
+    </div>
+</nav>
+
+{{#*inline ".scene"}}
+<li class="ui-control scene {{ cssClass }}" data-scene-id="{{ id }}" data-action="viewScene"
+    {{#if tooltip}} data-tooltip-text="{{ tooltip }}" {{/if}}>
+    <span class="scene-name ellipsis">{{ name }}</span>
+    {{#if users}}
+    <ul class="scene-players">
+        {{#each users}}
+        <li class="scene-player" style="--color-bg: {{ color }}; --color-border: {{ border }}" data-tooltip
+            aria-label="{{ name }}">{{ letter }}</li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</li>
+{{/inline}}
