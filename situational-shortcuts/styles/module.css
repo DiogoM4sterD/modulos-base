@@ -1,0 +1,73 @@
+.situational-shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 0.2rem 0;
+}
+
+.situational-shortcuts-btn {
+  border: 1px solid #00000040;
+  border-radius: 5px;
+  padding: 0.15rem 0.3rem;
+  position: relative;
+  border: 1px solid var(--color-text-primary);
+}
+
+.situational-shortcuts-btn:hover {
+  cursor: pointer;
+  backdrop-filter: brightness(0.95);
+}
+
+.situational-shortcuts-btn::after {
+  position: absolute;
+  pointer-events: none;
+  content: attr(data-bonus);
+  background: rgba(37, 37, 37, 0.849);
+  color: white;
+  padding: 0.15rem 0.3rem;
+  bottom: 100%;
+  left: 50%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: bottom center;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.situational-shortcuts-btn:hover::after {
+  transform: translateX(-50%) scaleY(1);
+  opacity: 1;
+}
+
+#SituationalShortcutsConfig .main-content{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#SituationalShortcutsConfig .bonuses-config{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+#SituationalShortcutsConfig .bonus-config {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.3rem;
+}
+
+#SituationalShortcutsConfig .bonus-config *{
+    padding: 0.2rem 0.3rem;
+}
+
+#SituationalShortcutsConfig .btn-container{
+    display: flex;
+}
+
+#SituationalShortcutsConfig .form-group{
+  display: flex;
+  align-items: center;
+}

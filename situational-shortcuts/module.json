@@ -1,0 +1,45 @@
+{
+  "title": "Situational Shortcuts",
+  "description": "Quickly add bonuses to rolls.",
+  "version": "3.0.1",
+  "authors": [
+    {
+      "name": "theripper93",
+      "email": "tsplab@gmail.com",
+      "url": "https://www.patreon.com/theripper93"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    }
+  ],
+  "scripts": [
+    "scripts/main.js",
+    "scripts/config.js",
+    "scripts/module.js"
+  ],
+  "styles": [
+    "styles/module.css"
+  ],
+  "socket": true,
+  "id": "situational-shortcuts",
+  "relationships": {
+    "requires": [
+      {
+        "id": "lib-wrapper",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  },
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14",
+    "maximum": "14"
+  },
+  "manifest": "https://r2.foundryvtt.com/packages-public/situational-shortcuts/module.json",
+  "protected": true
+}

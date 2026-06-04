@@ -1,0 +1,39 @@
+{
+  "title": "Filepicker Plus",
+  "description": "FilePicker but better!",
+  "id": "filepicker-plus",
+  "version": "6.0.1",
+  "authors": [
+    {
+      "name": "theripper93",
+      "email": "tsplab@gmail.com",
+      "url": "https://www.patreon.com/theripper93"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    }
+  ],
+  "scripts": [],
+  "esmodules": [
+    "index.js"
+  ],
+  "styles": [
+    "styles/module.css"
+  ],
+  "packs": [],
+  "url": "https://www.patreon.com/theripper93",
+  "manifest": "https://r2.foundryvtt.com/packages-public/filepicker-plus/module.json",
+  "relationships": {
+    "requires": []
+  },
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14",
+    "maximum": "14"
+  },
+  "protected": true
+}

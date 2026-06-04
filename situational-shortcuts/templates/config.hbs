@@ -1,0 +1,16 @@
+<div class="main-content">
+    <ol class="bonuses-config">
+        {{#each this.setting}}
+        <li class="bonus-config">
+            <div class="form-group">
+                <label for="" >Name: </label>
+                <input type="text" class="name" value="{{@key}}">
+                <label for="">Bonus: </label>
+                <input type="text" class="value" value="{{this}}">
+                <button type="button" class="icon fas fa-trash" data-action="remove"></button>
+            </div>
+        </li>
+        {{/each}}
+    </ol>
+    <hr>
+</div>
