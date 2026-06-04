@@ -1,0 +1,97 @@
+{
+	"fvtt-perf-optim": {
+		"settings": {
+			"optimize-interface-layer-clipping": {
+				"name": "Optimierte Render-Reihenfolge von Token UI-Elementen",
+				"hint": "Optimiert, in welcher Reihenfolge die Token UI Elemente gerendert werden für verbessertes Draw Call Batching. Zusammen mit \"Token-Ressourceleisten cachen\" und \"Token-Effekte cachen\" aktivieren für den größten Effekt."
+			},
+
+			"token-bars-caching": {
+				"name": "Token-Ressourceleisten cachen",
+				"hint": "Cacht die Token-Ressourcenleisten, um Draw Batching zu verbessern. Kann auf hohen Zoomstufen geringe negative Auswirkung auf die Qualität haben."
+			},
+
+			"token-effects-caching": {
+				"name": "Token-Effekte cachen",
+				"hint": "Cacht die Token-Effektleiste. Kann auf hohen Zoomstufen geringe negative Auswirkung auf die Qualität haben."
+			},
+
+			"precomputed-noise-textures": {
+				"name": "Optimierte animierte Lichter",
+				"hint": "Aktiviert Shader-Optimierungen für bestimmte animierte Lichter (Bewitching Wave, Fairy Light, Ghostly Light, Smoke Patch, ...). Verbessert die Performance deutlich bei Szenen mit vielen animierten Lichtern."
+			},
+
+			"reduce-lighting-resolution": {
+				"name": "Auflösung der Lichteffekte reduzieren",
+				"hint": "Reduziert die interne Auflösung von Lichteffekten. Verbessert die Performance deutlich, insbesondere wenn viele Lichteffekte oder große Lichtquellen verwendet werden. V14 implementiert diesen Ansatz bereits für alle Performance-Stufen außer Maximum aber Prime Performance erlaubt granulare Kontrolle über alle Beleuchtungsebenen."
+			},
+
+			"control-icon-caching": {
+				"name": "Control-Icons cachen",
+				"hint": "Cacht Control Icons (Icons für Notizen, Sound- und Zeichenebene). Verbessert die Performance in Szenen mit vielen sichtbaren Notizen und manchen anderen UI-Elementen."
+			},
+
+			"mesh-geometry-fitting": {
+				"name": "Optimierte Geometrie für Tokens und Kacheln",
+				"hint": "Passt die Geometrie von Token- und Kachel-Meshes an den sichtbaren Teil der Textur an. Verringert GPU-Overdraw für Tokens und Kacheln mit transparenten Regionen. Wird automatisch für animierte (Video-)Tokens, Kacheln und in anderen Sonderfällen übersprungen. Experimentelles Feature."
+			},
+
+			"wall-sprite-caching": {
+				"name": "Optimierte Wände-Ebene",
+				"hint": "Optimiert das Zeichnen von Wandsegmenten, indem teure Grafikobjekte durch vorberechnete Sprites ersetzt werden. Verbessert die Performance auf der Wände-Ebene deutlich."
+			},
+
+			"token-layer-cache": {
+				"name": "Token UI-Ebene cachen",
+				"hint": "Rendert alle Token UI-Elemente (Leisten, Namensschilder, Statuseffekte, Void-Meshes) einmalig in eine Textur und verwendet das gecachte Ergebnis jeden Frame. Kann die Performance bei Szenen mit vielen Tokens deutlich verbessern."
+			},
+
+			"ember-shader-optimizations": {
+				"name": "Ember-Shader optimieren",
+				"hint": "Optimiert Shader des Ember-Moduls. Verbessert die Performance in der Regionskarte, Weltkarte und verschiedenen anderen Szenen deutlich.",
+				"emberVersionWarning": "Prime Performance und insbesondere Ember Shader-Optimierungen wurden nur mit Ember Version 0.5.1 getestet. Bitte DEAKTIVIERE DIESES MODUL bevor du Probleme an das Ember-Team meldest."
+			},
+
+			"dnd5e-optimizations": {
+				"name": "D&D 5e spezifische Optimierungen",
+				"hint": "Optimiert D&D 5e spezifische Features. Ersetzt den Map Location note marker mit einer optimierten Version. Verbessert die Performance erheblich in Szenen mit vielen dieser Notizen."
+			},
+
+			"disable-app-v2-background-blur": {
+				"name": "Hintergrund-Blur deaktivieren",
+				"hint": "Deaktiviert die Hintergrund-Blur in App V2 und allen anderen UI-Elementen. Dies kann die Leistung deutlich verbessern, insbesondere für schwächeren GPUs."
+			},
+
+			"custom-render-scale": {
+				"name": "Skalierung der Lichteffekte",
+				"label": "Skalierung konfigurieren",
+				"hint": "Konfiguriere die interne Auflösung für Lichteffekte auf dem Spielfeld. Dies kann die Leistung deutlich verbessern, besonders auf schwächeren GPUs. Die visuelle Auswirkung reicht von unbemerkbar bis sehr auffällig, abhängig von der Effektebene. Aktiviere \"Auflösung der Lichteffekte reduzieren\", damit diese Konfiguration wirksam wird.",
+				"menu": {
+					"title": "Benutzerdefinierte Skalierung",
+					"label": "Benutzerdefinierte Skalierung",
+					"description": "Konfiguriere die Skalierung für die individuellen Ebenen der Lichteffekte. Die Darstellungsskalierung ist der Prozentwert für die interne Auflösung der Lichteffekte. Ein Wert von 100 bedeutet 100% Darstellungsskalierung, also keine Änderung. Ein Wert von 50 bedeutet, dass die Auflösung halbiert (und die Menge der zu berechnenden Pixel geviertelt) wird, usw.",
+					"confirm": "Bestätigen",
+					"cancel": "Zurücksetzen",
+					"FIELDS": {
+						"background": {
+							"label": "Hintergrund",
+							"hint": "Darstellungsskalierung für Hintergrundeffekte. Hohe visuelle Auswirkung, minimale Leistungsverbesserung. Optimierter Standardwert ist 100%."
+						},
+						"illumination": {
+							"label": "Beleuchtung",
+							"hint": "Darstellungsskalierung für die Beleuchtungsebene. Sehr geringe visuelle Auswirkung, mittlere Leistungsverbesserung. Optimierter Standardwert ist 40%."
+						},
+						"coloration": {
+							"label": "Färbung",
+							"hint": "Darstellungsskalierung für Färbungsebene. Mittlere bis sehr hohe visuelle Auswirkung, abhängig von der gewählten Färbungsmethode. Hohe Leistungsverbesserung. Optimierter Standardwert ist 100%."
+						},
+						"darkness": {
+							"label": "Dunkelheit",
+							"hint": "Darstellungsskalierung für Dunkelheitseffekte. Minimale visuelle Auswirkung, minimale Leistungsverbesserung. Optimierter Standardwert ist 50%."
+						}
+					}
+				}
+			}
+		}
+	}
+}

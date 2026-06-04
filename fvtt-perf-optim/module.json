@@ -1,0 +1,74 @@
+{
+    "id": "fvtt-perf-optim",
+    "title": "Prime Performance",
+    "version": "0.12.6",
+    "description": "Provides a collection of unofficial performance optimizations and hacks for foundry vtt.",
+    "esmodules": [
+        "dist/fvtt-perf-optim.js"
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json",
+            "flags": {}
+        },
+        {
+            "lang": "de",
+            "name": "Deutsch",
+            "path": "lang/de.json",
+            "flags": {}
+        },
+        {
+            "lang": "pl",
+            "name": "Polski",
+            "path": "lang/pl.json",
+            "flags": {}
+        },
+        {
+            "lang": "fr",
+            "name": "French",
+            "path": "lang/fr.json",
+            "flags": {}
+        },
+        {
+            "lang": "ja",
+            "name": "日本語",
+            "path": "lang/ja.json",
+            "flags": {}
+        }
+    ],
+    "styles": [
+        "styles/disable-blur.css"
+    ],
+    "compatibility": {
+        "minimum": "12.324",
+        "verified": "14.361",
+        "maximum": "14"
+    },
+    "relationships": {
+        "requires": [
+            {
+                "id": "lib-wrapper",
+                "type": "module",
+                "compatibility": {
+                    "minimum": "1.0.0.0",
+                    "verified": "1.12.14.0"
+                }
+            }
+        ],
+        "systems": []
+    },
+    "authors": [
+        {
+            "name": "Codas",
+            "discord": "Codas"
+        }
+    ],
+    "url": "https://github.com/Codas/foundryvtt-performance-hacks",
+    "bugs": "https://github.com/Codas/foundryvtt-performance-hacks/issues",
+    "readme": "https://github.com/Codas/foundryvtt-performance-hacks/blob/main/README.md",
+    "changelog": "https://github.com/Codas/foundryvtt-performance-hacks/releases",
+    "manifest": "https://github.com/Codas/foundryvtt-performance-hacks/releases/latest/download/module.json",
+    "download": "https://github.com/Codas/foundryvtt-performance-hacks/releases/download/v0.12.6/module.zip"
+}

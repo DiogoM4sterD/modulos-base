@@ -1,0 +1,21 @@
+<div >
+<ol style="list-style: none;margin: 0;padding: 0;max-height: 50vh; overflow-y: scroll;">
+    {{#each files}}
+    <li style="display: flex;align-items: center;border-bottom: 1px solid darkgray;">
+        <input type="checkbox" name="{{fullPath}}" checked />
+        <label for="{{fullPath}}">{{fileName}}</label>
+    </li>
+    {{/each}}
+</ol>
+    <footer class="sheet-footer flexrow">
+        <button type="submit">
+            <i class="fa-solid fa-file-zipper"></i> {{localize "media-optimizer.file-converter.buttons.convert"}}
+        </button>
+        <button id="select-all">
+            <i class="fa-solid fa-check"></i> {{localize "media-optimizer.file-converter.buttons.select-all"}}
+        </button>
+        <button id="select-none">
+            <i class="fa-solid fa-times"></i> {{localize "media-optimizer.file-converter.buttons.select-none"}}
+        </button>
+    </footer>
+</div>

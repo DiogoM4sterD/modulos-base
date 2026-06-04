@@ -1,0 +1,30 @@
+<div>
+    {{#if displayMessage}}
+    {{#if hasBloat}}
+    <p class="hint" style="color: var(--color-level-error);">{{localize "media-optimizer.bloat-detector.bloat"}}{{totalSize}}</p>
+    {{else}}
+    <p class="hint" style="color: var(--color-level-success);">{{localize "media-optimizer.bloat-detector.no-bloat"}}</p>
+    {{/if}}
+    {{/if}}
+
+    {{#each collections as |collection|}}
+        <table style="margin: 0;">
+            <thead>
+                <tr>
+                    <th>{{collection.name}} ({{collectionSize}}MB)</th>
+                    <th style="width: 4rem;">Size (MB)</th>
+                    <th style="width: 2rem;"><i class="fa-duotone fa-magnifying-glass-chart"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each collection.entries as |entry|}}
+                <tr>
+                    <td style="user-select: all;">{{entry.name}}</td>
+                    <td>{{entry.size}}</td>
+                    <td style="text-align: center;">{{#if entry.uuid}}<i data-uuid="{{entry.uuid}}" style="cursor: pointer;" class="fa-duotone fa-magnifying-glass-chart"></i>{{/if}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    {{/each}}
+</div>

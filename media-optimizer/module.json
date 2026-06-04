@@ -1,0 +1,44 @@
+{
+  "title": "Media Optimizer",
+  "description": "Automatically optimize images, audio and video on upload",
+  "id": "media-optimizer",
+  "version": "6.0.1",
+  "authors": [
+    {
+      "name": "theripper93",
+      "email": "tsplab@gmail.com",
+      "url": "https://www.patreon.com/theripper93"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    }
+  ],
+  "scripts": [],
+  "esmodules": [
+    "index.js"
+  ],
+  "styles": [
+    "styles/module.css"
+  ],
+  "packs": [],
+  "url": "https://theripper93.com/",
+  "manifest": "https://r2.foundryvtt.com/packages-public/media-optimizer/module.json",
+  "relationships": {
+    "requires": [
+      {
+        "id": "lib-wrapper",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  },
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "protected": true
+}
