@@ -1,0 +1,1 @@
+{"id":"c1090b08-7f74-4044-88bc-7db7c83b7cc6","scriptName":"Token Saver","findRegex":"<!-- GFX_START -->[\\s\\S]*?<!-- GFX_END -->","replaceString":"","trimStrings":[],"placement":[2],"disabled":false,"markdownOnly":false,"promptOnly":true,"runOnEdit":false,"substituteRegex":0,"minDepth":0,"maxDepth":null}
