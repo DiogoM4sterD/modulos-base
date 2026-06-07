@@ -1,0 +1,121 @@
+<div>
+    <section class="tab standard-form scrollable" data-tab="modules" data-group="main">
+        <table>
+            <thead>
+                <tr>
+                    <th>{{localize "world-setting-sync.settings-sync.namespace"}}</th>
+                    <th>{{localize "world-setting-sync.settings-sync.change"}}</th>
+                    <th>{{localize "world-setting-sync.settings-sync.apply"}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each modules}}
+                <tr data-module="{{id}}">
+                    <td>{{label}}</td>
+                    <td style="color: var({{color}})">{{change}}</td>
+                    <td>
+                        <input type="checkbox" name="apply" checked>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+
+    <section class="tab standard-form scrollable" data-tab="users" data-group="main">
+        <table>
+            <thead>
+                <tr>
+                    <th>{{localize "world-setting-sync.settings-sync.user"}}</th>
+                    <th>{{localize "world-setting-sync.settings-sync.change"}}</th>
+                    <th>{{localize "world-setting-sync.settings-sync.apply"}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each users}}
+                <tr data-user="{{id}}">
+                    <td>{{label}}</td>
+                    <td style="color: var({{color}})">
+                    <details>
+                        <summary>{{localize "world-setting-sync.settings-sync.expand"}}</summary>
+                        {{change}}
+                    </details>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="apply" checked>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+
+    <section class="tab standard-form scrollable" data-tab="settingsAgnostic" data-group="main">
+        <table>
+            <thead>
+                <tr>
+                    <th>{{localize "world-setting-sync.settings-sync.namespace"}}</th>
+                    <th>{{localize "world-setting-sync.settings-sync.setting"}}</th>
+                    <th>{{localize "world-setting-sync.settings-sync.change"}}</th>
+                    <th>{{localize "world-setting-sync.settings-sync.apply"}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each settingsAgnostic}}
+                <tr data-namespace="{{namespace}}" data-key="{{key}}">
+                    <td>{{label}}</td>
+                    <td>{{localize name}}</td>
+                    <td style="color: var({{color}})">
+                    {{#if useDetails}}
+                        <details>
+                            <summary>{{localize "world-setting-sync.settings-sync.expand"}}</summary>
+                            {{change}}
+                        </details>
+                    {{else}}
+                        {{change}}
+                    {{/if}}
+                    </td>
+                    <td>
+                        <input type="checkbox" name="apply" checked>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+
+    <section class="tab standard-form scrollable" data-tab="settingsSystem" data-group="main">
+        <table>
+            <thead>
+                <tr>
+                    <th>{{localize "world-setting-sync.settings-sync.namespace"}}</th>
+                    <th>{{localize "world-setting-sync.settings-sync.setting"}}</th>
+                    <th>{{localize "world-setting-sync.settings-sync.change"}}</th>
+                    <th>{{localize "world-setting-sync.settings-sync.apply"}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each settingsSystem}}
+                <tr data-namespace="{{namespace}}" data-key="{{key}}">
+                    <td>{{label}}</td>
+                    <td>{{localize name}}</td>
+                    <td style="color: var({{color}})">
+                        {{#if useDetails}}
+                            <details>
+                                <summary>{{localize "world-setting-sync.settings-sync.expand"}}</summary>
+                                {{change}}
+                            </details>
+                        {{else}}
+                        {{change}}
+                        {{/if}} 
+                    </td>
+                    <td>
+                        <input type="checkbox" name="apply" checked>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+
+</div>

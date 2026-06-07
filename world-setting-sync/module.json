@@ -1,0 +1,39 @@
+{
+  "title": "World Setting Sync",
+  "description": "Synchronizes settings, modules and users across worlds.",
+  "id": "world-setting-sync",
+  "version": "3.0.0",
+  "persistentStorage": true,
+  "authors": [
+    {
+      "name": "theripper93",
+      "email": "tsplab@gmail.com",
+      "url": "https://www.patreon.com/theripper93"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    }
+  ],
+  "scripts": [],
+  "esmodules": [
+    "index.js"
+  ],
+  "styles": [
+    "styles/module.css"
+  ],
+  "packs": [],
+  "url": "https://www.patreon.com/theripper93",
+  "manifest": "https://r2.foundryvtt.com/packages-public/world-setting-sync/module.json",
+  "relationships": {
+    "requires": []
+  },
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "protected": true
+}

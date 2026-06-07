@@ -1,0 +1,10 @@
+.settings-sync table {
+  margin: 0;
+}
+.settings-sync table td {
+  overflow-wrap: break-word;
+  max-width: 200px;
+}
+.settings-sync section.tab {
+  max-height: 65vh;
+}/*# sourceMappingURL=module.css.map */
